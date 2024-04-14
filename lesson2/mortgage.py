@@ -1,11 +1,3 @@
-
-# Get 3 inputs
-# Validate inputs
-# Calculate monthly payments
-# Output results
-
-
-
 def prompt(message):
     print(f'==> {message}')
 
