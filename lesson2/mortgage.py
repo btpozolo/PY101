@@ -5,13 +5,13 @@ def get_input(message):
     prompt(message)
     return input()
 
-def invalid_num(number):
+def invalid_num(entry):
     try:
-        float(number)
+        float(entry)
     except ValueError:
-        prompt(f'Sorry the number you entered ({number}) is not valid')
+        prompt(f'Sorry the number you entered ({entry}) is not valid')
         return True
-    if float(number) > 0:
+    if float(entry) > 0:
         return False
     return True
 
