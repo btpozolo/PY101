@@ -36,9 +36,9 @@ def prompt(message):
 def convert_choice(choice):
     if len(choice) == 1:
         for item in FULL_CHOICES:
-            if item[1] == choice:
+            if item[1] == choice.lower():
                 choice = item[0]
-    return choice
+    return choice.lower()
 
 def get_choice():
     temp_choice = input()
@@ -56,6 +56,7 @@ def display_welcome():
     print('\n----------------------------------------------\n'
         '--------- Welcome to RPS Game ----------------\n'
         '----------------------------------------------\n')
+    print('The game continues until someone gets to 3 wins.\n')
 
 def play_round():
     prompt(f'Choose one: {", ".join(VALID_CHOICES)}')
